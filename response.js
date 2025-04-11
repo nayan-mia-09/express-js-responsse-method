@@ -69,6 +69,12 @@ app.get("/five", (req, res) => {
     res.json(jsonResponse)
 })
 
+// Response Download file
+
+app.get("/six", (req, res) => {
+    res.download("./Download/be.jpg")
+})
+
 
 
 app.listen(port, () => {
