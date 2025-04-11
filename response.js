@@ -35,6 +35,39 @@ app.get("/status", (req, res) => {
     res.end("Bad Error")
 })
 
+// JSON Response Method 
+
+let jsonResponse = [
+    {
+        name: "Nayan",
+        city: "Faridpur",
+        age: 22,
+        occupatio: "Web Developer"
+    },
+    {
+        name: "Omor",
+        city: "Faridpur",
+        age: 23,
+        occupatio: "Police"
+    },
+    {
+        name: "Anamul",
+        city: "Faridpur",
+        age: 28,
+        occupatio: "Buisnessman"
+    },
+    {
+        name: "Rakibul",
+        city: "Faridpur",
+        age: 24,
+        occupatio: "Job Holder"
+    },
+
+]
+
+app.get("/five", (req, res) => {
+    res.json(jsonResponse)
+})
 
 
 
