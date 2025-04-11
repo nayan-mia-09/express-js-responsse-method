@@ -96,6 +96,21 @@ app.get("/head", (req, res) => {
     res.send("This is Head")
 })
 
+app.get("/cookie", (req, res) => {
+    res.cookie("name", "Nayan")
+    res.cookie("age", "22")
+    res.cookie("occupation", "Web Developer")
+
+    res.send("Cookie Add Successfully.")
+})
+
+// Cookie Delete 
+
+app.get("/clear", (req, res) => {
+    res.clearCookie("occupation")
+
+    res.send("Cookie Delete Successfully.")
+})
 
 app.listen(port, () => {
     console.log("My Server is running successfully.")
