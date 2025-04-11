@@ -75,6 +75,16 @@ app.get("/six", (req, res) => {
     res.download("./Download/be.jpg")
 })
 
+// Reasponse redirect 
+
+app.get("/bangladesh", (req, res) => {
+    res.redirect("http://localhost:8080/switzerland")
+})
+
+app.get("/switzerland" , (req, res) => {
+    res.send("Hello everyone switzerland is my dream country")
+})
+
 
 
 app.listen(port, () => {
