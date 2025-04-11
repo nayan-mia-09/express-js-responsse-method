@@ -85,6 +85,16 @@ app.get("/switzerland" , (req, res) => {
     res.send("Hello everyone switzerland is my dream country")
 })
 
+// Response header
+
+app.get("/head", (req, res) => {
+    res.append("name", "Nayan Mia")
+    res.append("city", "Faridpur")
+    res.append("age" , "22")
+    res.append("occupation", "Web Developer")
+
+    res.send("This is Head")
+})
 
 
 app.listen(port, () => {
