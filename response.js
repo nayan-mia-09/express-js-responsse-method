@@ -28,7 +28,12 @@ app.delete("/four", (req, res) => {
     res.send("Hello this is simple string response delete method")
 })
 
+// Response Status code 
 
+app.get("/status", (req, res) => {
+    res.status(401)
+    res.end("Bad Error")
+})
 
 
 
